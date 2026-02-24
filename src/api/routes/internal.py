@@ -1081,6 +1081,7 @@ async def get_file_upload_url(
             access_key=s3_config.access_key,
             secret_key=s3_config.secret_key,
             session_token=s3_config.session_token,
+            endpoint_url=s3_config.endpoint,
         )
 
         # if public:
