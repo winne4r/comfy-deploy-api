@@ -718,6 +718,7 @@ def generate_presigned_url(
     size=None,
     content_type=None,
     public=False,
+    endpoint_url: str = None,
 ):
     s3_client = boto3.client(
         "s3",
@@ -725,6 +726,7 @@ def generate_presigned_url(
         aws_access_key_id=access_key,
         aws_secret_access_key=secret_key,
         aws_session_token=session_token,
+        endpoint_url=endpoint_url,
         config=Config(signature_version="s3v4"),
     )
     params = {
